@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jogo da Palavra Secreta</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <h1>Palavra <span>Secreta</span></h1>
+    <p>JOGO DA MATRIZ DE LETRAS</p>
+  </header>
+
+  <div id="setup-panel">
+    <div class="card">
+      <h2>Como jogar</h2>
+      <p>
+        Pense em uma palavra de <strong>2 a 5 letras</strong>. A cada rodada, para <strong>cada letra</strong> diga em qual <strong>coluna</strong> ela está na matriz atual.<br><br>
+        As colunas escolhidas (na ordem das letras) <strong>viram as linhas</strong> da próxima matriz.<br><br>
+        Após <strong>N rodadas</strong> (N = número de letras), a diagonal revela a palavra!
+      </p>
+      <div class="field">
+        <label>Quantas letras tem a palavra?</label>
+        <div class="counter">
+          <button type="button" id="btn-minus" onclick="changeLen(-1)">−</button>
+          <span id="len-display">4</span>
+          <button type="button" id="btn-plus" onclick="changeLen(1)">+</button>
+        </div>
+      </div>
+      <button class="btn" onclick="startGame()">Iniciar →</button>
+    </div>
+  </div>
+
+  <div id="game-panel" style="display:none;">
+    <div class="progress-row" id="progress-row"></div>
+    <div id="round-content"></div>
+    <button class="btn ghost" onclick="resetGame()" style="margin-top:8px;">↺ Recomeçar</button>
+  </div>
+
+  <div id="win-panel" style="display:none;">
+    <div class="card win-card">
+      <div class="win-emoji">🎉</div>
+      <h2>A palavra é...</h2>
+      <div class="word-row" id="win-word-row"></div>
+      <p class="win-sub">Descoberta pela diagonal da matriz final!</p>
+      <button class="btn green" onclick="resetGame()">Jogar Novamente →</button>
+    </div>
+  </div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
