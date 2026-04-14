@@ -41,8 +41,9 @@ Aatividade_07/
 - **HTML5** - Estrutura
 - **CSS3** - Estilos responsivos com design retrô
 - **JavaScript (ES6+)** - Lógica matemática e interatividade
+- **Disciplina**: Programação para web
 
-## 👤 Autor
+## 👤 Autor: Nilson
 
 Atividade 07 - Programação para Internet I
 
